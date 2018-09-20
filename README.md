@@ -1,2 +1,2 @@
-# home-page-resume
-My home page
+# my-profile
+my profile
