@@ -2,7 +2,7 @@
   "name": "my-profile",
   "version": "1.0.0",
   "description": "my profile",
-  "main": "index.html",
+  "private": true,
   "scripts": {
     "start": "npm run dev",
     "dev": "webpack-dev-server --open --config ./webpack.dev.js",
