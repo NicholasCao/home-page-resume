@@ -1,12 +1,13 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require("clean-webpack-plugin");
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry:  __dirname + '/src/main.js',
   output: {
-    path: __dirname + '/dist',
-    filename: '[name].js'
+    path: __dirname + "/dist",
+    filename: "[name]-[hash].js"
   },
   devServer: {
     contentBase: './dist', //本地服务器所加载的页面所在的目录
@@ -14,7 +15,7 @@ module.exports = {
     inline: true, //实时刷新
     hot: true
   },
-  devtool: 'eval-source-map',
+  devtool: 'null',
   module: {
     rules: [
       {
@@ -28,6 +29,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: __dirname + '/index.html' //new 一个这个插件的实例，并传入相关的参数
     }),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.optimize.OccurrenceOrderPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    new CleanWebpackPlugin('dist/*.*', {
+      root: __dirname,
+      verbose: true,
+      dry: false
+    })
   ]
-}
+};

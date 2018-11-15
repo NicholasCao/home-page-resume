@@ -5,8 +5,8 @@
   "main": "index.html",
   "scripts": {
     "start": "npm run dev",
-    "dev": "webpack-dev-server --open --mode=development",
-    "build": "webpack --mode=production",
+    "dev": "webpack-dev-server --open",
+    "build": "set NODE_ENV=production && webpack --config ./webpack.prod.config.js --progress",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,12 +17,13 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
-    "babel-loader": "^7.1.5",
-    "webpack-cli": "^3.1.2",
     "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
+    "clean-webpack-plugin": "^1.0.0",
     "html-webpack-plugin": "^3.2.0",
     "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10"
   },
   "bugs": {
