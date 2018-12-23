@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh" style="height:100%">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +8,9 @@
   <meta name="author" content="Nicholas">
   <title>Nicholas's Profile</title>
 </head>
-<body>
-  <div id="app">
-    <div id="index">
+<body style="height:100%">
+  <div id="app" style="height:100%">
+    <div id="index" style="height:70%">
       <div id="bio">
         <h2>HELLO</h2>
         <h1>I'm Nicholas Cao</h1>
@@ -22,6 +22,23 @@
         </p>
       </div>
     </div>
+    <div id="detail" style="height:200%; background:black">
+      detail
+    </div>
   </div>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+    ScrollReveal().reveal('#detail',{
+      // viewFactor: 0.32,
+      delay: 0,
+      scale: 0.95,
+      opacity: 1,
+      distance: '30px',
+      origin: 'bottom',
+      reset: true,
+      duration: 1000,
+      easing: 'ease'
+    });
+  </script>
 </body>
 </html>
