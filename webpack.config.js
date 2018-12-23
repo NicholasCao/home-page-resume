@@ -15,7 +15,7 @@ module.exports = {
         test: /\.js$/,
         loader: ['babel-loader?cacheDirectory=true'],
         exclude:  __dirname + '/node_modules/'
-      },
+      }, 
       {
         test: /\.js$/,
         loader: 'eslint-loader',
@@ -24,6 +24,14 @@ module.exports = {
         options: {
           formatter: require('eslint-friendly-formatter') // 指定错误报告的格式规范
         }
+      }, 
+      {
+        test: /\.css$/,
+        loader: ['style-loader', 'css-loader']
+      }, 
+      {
+        test: /\.less$/,
+        loader: ['style-loader', 'css-loader', 'less-loader']
       }
     ]
   },
