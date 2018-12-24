@@ -3,7 +3,7 @@ console.log('hello');
 (() => {
   console.log('test ES6')
 })()
-import a from './less/normalize.css'
+import './less/normalize.less'
 import printMe from './print.js'
 
 if (module.hot) {

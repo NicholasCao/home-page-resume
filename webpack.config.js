@@ -14,6 +14,7 @@ module.exports = {
       {
         test: /\.js$/,
         loader: ['babel-loader?cacheDirectory=true'],
+        include: [path.resolve(__dirname, 'src')],
         exclude:  __dirname + '/node_modules/'
       }, 
       {
