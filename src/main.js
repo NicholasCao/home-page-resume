@@ -1,8 +1,3 @@
-console.log('hello');
-
-(() => {
-  console.log('test ES6')
-})()
 import './less/normalize.less'
 import printMe from './print.js'
 

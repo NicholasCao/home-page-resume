@@ -5,8 +5,8 @@
   "private": true,
   "scripts": {
     "start": "npm run dev",
-    "dev": "webpack-dev-server --open --config ./webpack.dev.js",
-    "build": "set NODE_ENV=production && webpack --config ./webpack.prod.js --progress",
+    "dev": "webpack-dev-server --open --config ./build/webpack.dev.js",
+    "build": "set NODE_ENV=production && webpack --config ./build/webpack.prod.js --progress",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,7 +15,9 @@
   },
   "author": "",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "extract-text-webpack-plugin": "^3.0.2"
+  },
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",

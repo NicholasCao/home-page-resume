@@ -3,16 +3,13 @@ const merge = require('webpack-merge');
 const common = require('./webpack.config.js');
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = merge(common, {
   mode: 'production',
-  output: {
-    path: __dirname + "/dist",
-    filename: "[name]-[hash].js"
-  },
   devtool: 'null',
   plugins: [
-    new CleanWebpackPlugin('dist/*.*', {
+    new CleanWebpackPlugin('/dist/*.*', {
       root: __dirname,
       verbose: true,
       dry: false
@@ -21,6 +18,6 @@ module.exports = merge(common, {
     new UglifyJsPlugin(),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production')
-    })
+    }),
   ]
 });

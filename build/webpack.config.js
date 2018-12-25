@@ -1,27 +1,29 @@
 const webpack = require('webpack');
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require("clean-webpack-plugin");
-const path = require('path');
+
+
 
 module.exports = {
-  entry:  __dirname + '/src/main.js',
+  entry:  path.resolve('./src/main.js'),
   output: {
-    path: __dirname + '/dist',
-    filename: '[name].js'
+    path: path.resolve('../dist'),
+    filename: "[name]-[hash].js"
   },
   module: {
     rules: [
       {
         test: /\.js$/,
         loader: ['babel-loader?cacheDirectory=true'],
-        include: [path.resolve(__dirname, 'src')],
+        include: [path.resolve('../src')],
         exclude:  __dirname + '/node_modules/'
       }, 
       {
         test: /\.js$/,
         loader: 'eslint-loader',
         enforce: "pre",
-        include: [path.resolve(__dirname, 'src')],
+        include: [path.resolve('../src')],
         options: {
           formatter: require('eslint-friendly-formatter') // 指定错误报告的格式规范
         }
@@ -38,7 +40,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: __dirname + '/index.html'
+      template: './index.html'
     })
   ]
 }
