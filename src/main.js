@@ -1,6 +1,6 @@
 import './less/normalize.less'
 import './less/main.less'
-import '../static/twitter.svg'
+
 import printMe from './print.js'
 
 
