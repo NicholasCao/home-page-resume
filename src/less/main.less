@@ -7,12 +7,38 @@
   }
 }
 #detail{
+  z-index: -2;
   height: 20%; 
   background: #181818;
   width: 95%;
   margin: 0 auto;
   border-radius: 8px;
-  #social{
-    margin: 0 10% auto;
+  #social-box{
+    padding-top: 30px;
+    margin-left: 10%;
+    display: flex;
+    #circle{
+      width: 24px;
+      height: 24px;
+      background: linear-gradient(#7346FA, #5A6EFA);
+      border-radius: 50%;
+      #min-circle{
+        margin: auto;
+        width:  24px;
+        height: 24px;
+        background: #181818;
+        border-radius: 50%;
+        transform: scale(0.7); 
+      }
+    }
+    #social{
+      margin-left: auto;
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 8%;
+      img{
+        margin: 0 12px;
+      }
+    }
   }
 }
