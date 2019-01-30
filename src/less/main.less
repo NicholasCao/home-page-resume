@@ -52,15 +52,59 @@
       }
     }
   }
-  #blog-box{
-    margin: 0 30%;
-    background: #fff;
+}
+#blog-box{
+  background: #F4F8FB;
+  height: 100%;
+  width: 100%;
+  .head{
+    padding: 6% 0 4% 0;
+    margin-left: 20%;
+    font-size: 1.5rem;
+  }
+  .articles-box{
+    width: 70%;
+    margin: auto;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
     .article{
       background: #fff;
-      height: 25%;
-      width: 40%;
-      border-radius: 5px;
-      // box-shadow: #181818 0 0 5px 5px;
+      width: 35%;
+      height: 60%;
+      border-radius: 3px;
+      display: flex;
+      flex-direction: column;
+      img{
+        width: 100%;
+      }
+      .article-detail{
+        padding: 5%;
+        .tags{
+          color: #9BB9CD;
+          text-align: center;
+          margin: 7px 0;
+          font-size: 0.7rem;
+        }
+        .title{
+          text-align: center;
+          color: #222;
+          margin: 5px 0;
+        }
+        .desc{
+          color: #888;
+          font-size: 0.7rem;
+          text-align: center;
+          margin: 5px 0;
+        }
+      }
+      .button-box{
+        border-top: 1px solid #e5e5e5;
+        height: 10%;
+        margin: 0 auto;
+        margin-top: 20%;
+        width: 70%;
+      }
     }
   }
 }
