@@ -7,6 +7,8 @@ import defineReactive from './utils/defineReactive.js'
 var data = {
   scrollingLock: false
 }
+
+const imgUrl = []
 // window.onload = (() => {
 //   window.onmousewheel = e => {
 //     e.stopPropagation()
