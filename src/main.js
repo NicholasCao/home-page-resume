@@ -23,6 +23,7 @@ while (random1 == random2){
 }
 photos[0].src = url + imgs[random1]
 photos[1].src = url + imgs[random2]
+
 // window.onload = (() => {
 //   window.onmousewheel = e => {
 //     e.stopPropagation()
